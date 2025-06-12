@@ -78,7 +78,7 @@ public class RatesFetchingService(
                                 {
                                     _logger.LogWarning("  Significant variation for {Symbol}: {PercentageChange:P2} (Old: {OldRateAmount}, Current: {CurrentRateAmount})",
                                         checkResult.Symbol, checkResult.PercentageChange, checkResult.OldestRate?.Amount, checkResult.CurrentRate.Amount);
-                                    await _positionsNotificationService.NotifyRateChangeAsync(checkResult.Symbol, checkResult.CurrentRate); // Call remains the same
+                                    await _positionsNotificationService.NotifyRateChangeAsync(checkResult.Symbol, checkResult.CurrentRate);
                                 }
                                 else
                                 {
